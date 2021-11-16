@@ -15,7 +15,8 @@
 
     </head>
     <body>
-        <!-- Cabeçalho -->
+        
+        <!-- CABEÇALHO -->
         <header>
 
             <div class="header-container">
@@ -30,15 +31,27 @@
 
         <!-- C H A T  -->
         <div class="chat-container">
-        
-            <div class="msg aviso">(09:21:45)  João  entra na sala...</div>
-            <div class="msg">(09:22:28) João para Todos: Bom dia</div>
-            <div class="msg reservada"> <span class="horario">(09:22:48)</span> <span>João</span> reservadamente 
-            para <span>Maria</span>: Oi gatinha quer tc?</div>
+            
+            <div class="msg-container aviso">
+                <div class="msg"><span class="horario">(09:22:48)</span>  
+                <span class="nome">João</span>  entra na sala...</div>
+            </div>
+            
+            
+            <div class="msg-container">
+                
+                <div class="msg"><span class="horario">(09:22:48)</span> 
+                <span class="nome">João</span> para <span class="nome">Todos</span>: Bom dia</div>
+            
+            </div>
+            
+            <div class="msg-container reservada">
+                <div class="msg"> <span class="horario">(09:22:48)</span> <span class="nome">João</span> 
+                reservadamente para <span class="nome">Maria</span>: Oi gatinha quer tc?</div>
+            </div>
+            
 
         </div>
-
-
 
         <!-- INPUT MENSAGEM -->
         <footer>
@@ -50,11 +63,12 @@
            <ion-icon name="paper-plane-outline"></ion-icon>
 
             </div>
+
         </footer>
 
-         
+        <!-- SCRIPTS -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-
         <script src="scripts.js"></script>
 
     </body>

@@ -37,10 +37,57 @@ header ion-icon {
 body{
     background-color: #E5E5E5;
 }
+
+
+/* C H A T - M E N S A G E N S */
+
 .chat-container{
     padding-top: 80px;
 }
 
+
+
+.horario{
+    color: #AAAAAA;
+}
+
+.msg-container{
+    min-height: 40px;
+    width: 100%;
+    background-color: #FFFFFF;
+
+    margin-top: 2px;
+    margin-bottom: 2px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.msg{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+
+    padding: 5px;
+}
+
+.aviso{
+    background-color: #DCDCDC;
+}
+
+.reservada{
+    background-color: #FFDEDE;
+}
+
+.msg .nome{
+    font-weight: 700;
+
+}
+
+
+/* INPUT MENSAGEM */
 footer{
     position: fixed;
     bottom: 0;
@@ -59,7 +106,7 @@ footer{
 
 .chat-input{
     width: 100%;
-
+    
     margin: 21px;
 
     display: flex;
@@ -67,32 +114,36 @@ footer{
     align-items: center;
 }
 
-/* footer input{
+
+.chat-input input{
+    
+    height: 30px;
     border: 0;
-} */
 
-footer ion-icon{
-    font-size: 27px;
-}
-
-.msg{
-    background-color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-
-    margin-top: 2px;
-    margin-bottom: 2px;
-
-    padding: 5px;
-
+    font-size: 18px;
+    line-height: 21px;
 }
 
-.aviso{
-    background-color: #DCDCDC;
+.chat-input input:focus-visible{
+    outline: none;
 }
 
-.reservada{
-    background-color: #FFDEDE;
+
+
+.chat-input input::placeholder{
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: black;
+}
+
+
+footer ion-icon{
+    font-size: 27px;
 }
