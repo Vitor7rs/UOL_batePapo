@@ -1,4 +1,4 @@
-
+// CARREGAR MENSAGENS DO SERVIDOR
 buscarMSG();
 setInterval(buscarMSG, 3000);
 
@@ -7,7 +7,6 @@ function buscarMSG(){
     promessa.then(plotarMSG);
     console.log("buscando");
 }
-
 
 function plotarMSG(dados){
     let resposta = dados.data;
@@ -22,6 +21,7 @@ function plotarMSG(dados){
             <div class="msg"><span class="horario">(${resposta[i].time})</span><span class="nome">${resposta[i].from}</span>  ${resposta[i].text}</div>
             </div>`
         }
+        
         else if(resposta[i].type == "message"){
             mensagens.innerHTML+=
             `<div class="msg-container" data-identifier="message"> 
@@ -36,11 +36,11 @@ function plotarMSG(dados){
             reservadamente para <span class="nome">${resposta[i].to}</span>: Oi gatinha quer tc?</div>
         </div>`
         }
-
     }
     window.scrollTo(0, document.body.scrollHeight);
 }
 
+// IDENTIFICAR USUARIO E VERIFICAR CONEXÃO
 let nome = "";
 let nomeObjeto = "";
 
@@ -74,7 +74,7 @@ function manterLogin(){
     const logado = axios.post('https://mock-api.driven.com.br/api/v4/uol/status', nomeObjeto);
 }
 
-
+// ENVIAR MENSAGENS
 function enviarMensagem(){
     let textoMensagemPick = document.querySelector(' .chat-input input')
     
@@ -98,6 +98,4 @@ function enviarMensagem(){
         alert('Erro ao enviar mensagem, recarregando página');
         window.location.reload()
     }
-
-    
 }
