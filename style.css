@@ -40,6 +40,7 @@ body{
 /* C H A T - M E N S A G E N S */
 .chat-container{
     padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .horario{
