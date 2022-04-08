@@ -5,7 +5,6 @@ setInterval(buscarMSG, 3000);
 function buscarMSG(){
     const promessa = axios.get('https://mock-api.driven.com.br/api/v4/uol/messages');
     promessa.then(plotarMSG);
-    console.log("buscando");
 }
 
 function plotarMSG(dados){
@@ -84,8 +83,6 @@ function enviarMensagem(){
         text: textoMensagemPick.value,
         type: "message"
     }
-
-    console.log(mensagemSend);
 
     let uparMensagem = axios.post('https://mock-api.driven.com.br/api/v4/uol/messages', mensagemSend);
 
